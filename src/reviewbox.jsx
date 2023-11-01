@@ -1,15 +1,18 @@
-import { useState } from 'react';
 const Reviewbox=({post,setPost,handleSubmit})=>{
   
     return(
         <div>
+         
         <section className='w-full max-w-full flex-start flex-col form' >
+        <p className='head_text orange_gradient'>
+        Test it out..
+    </p>
       <form
         onSubmit={handleSubmit}
         className='mt-10 w-full max-w-2xl flex flex-col gap-7 glassmorphism'
       >
         <label>
-          <span className='font-satoshi font-semibold text-base text-gray-700'>
+          <span className='font-satoshi font-semibold  text-white text-base text-gray-700'>
             Your review
           </span>
 
@@ -18,14 +21,14 @@ const Reviewbox=({post,setPost,handleSubmit})=>{
             onChange={(e) => setPost({ ...post, prompt: e.target.value })}
             placeholder='Write your review here'
             required
-            className='form_textarea '
+            className='form_textarea'
           />
         </label>
 
         <label>
-          <span className='font-satoshi font-semibold text-base text-gray-700'>
+          <span className='font-satoshi font-semibold  text-white text-base text-gray-700'>
             Field of review{" "}
-            <span className='font-normal'>
+            <span className='font-normal  text-white'>
               (#product, #review, #ecommerce, etc.)
             </span>
           </span>
@@ -43,7 +46,7 @@ const Reviewbox=({post,setPost,handleSubmit})=>{
 
           <button
           type='submit'
-            className='btn btn-sm btn-success analysis'
+            className='btn btn-sm glass analysis'
           >
             Submit
           </button>

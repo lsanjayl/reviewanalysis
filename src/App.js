@@ -2,6 +2,7 @@ import './App.css';
 import Reviewbox from './reviewbox';
 import { useState } from 'react';
 import log from './logo.png'
+
 function App() {
   const [post, setPost] = useState({ prompt: "", tag: "" });
   const [res,setRes]=useState({stats:[],conclusion:[]});
@@ -96,6 +97,26 @@ setRes({...res,conclusion:percentageData});
       identify fake and potential positive and negative reviews
     </p>
   </section>
+  <p className='mt-10 text-3xl text-white'>
+     Get your api now!!
+    </p>
+
+    <div className="mockup-code mt-10 glass">
+  <pre data-prefix="$"><code>const response = await fetch(</code></pre> 
+  <pre data-prefix=">" className="text-warning"><code>"https://api-inference.reviewbox?api.req",</code></pre> 
+  <pre data-prefix=">" className="text-success"><code>{"{"}</code></pre>
+  <pre data-prefix=">" className="text-success"><code>headers: {"{"} Authorization: "Bearer {"{"}API_TOKEN {"}"}" {"}"},</code></pre>
+  <pre data-prefix=">" className="text-success"><code>method: "POST",</code></pre>
+  <pre data-prefix=">" className="text-success"><code>body: JSON.stringify(data),</code></pre>
+  <pre data-prefix=">" className="text-success"><code>{"}"}</code></pre>
+  <pre data-prefix=">"><code>);</code></pre>
+  <pre data-prefix=">"><code>const result = await response.json();</code></pre>
+</div>
+
+
+
+
+
     <Reviewbox
     post={post}
     setPost={setPost}
@@ -115,7 +136,7 @@ setRes({...res,conclusion:percentageData});
   )}
     </div>
       }
-    <div className="stats shadow analysis">
+    <div className="stats shadow analysis headbox">
       
   {res&&res.stats.map((data)=>
 <div className="stat text-white"key={data.label}>

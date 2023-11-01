@@ -3,7 +3,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+.headbox{
+  background-color: #1a1a1a;
+}
 .lines {
   position: absolute;
   top: 0;
@@ -16,24 +18,24 @@
 
 .line {
   position: absolute;
-  width: 1px;
-  height: 100%;
+  width: 2px;
+  height: 100vh;
   top: 0;
   left: 50%;
-  background: rgba(255, 255, 255, 0.1);
-  overflow: hidden;
+  background: rgba(255, 145, 0, 0.1);
+  /* overflow: hidden; */
 }
 .line::after {
   content: "";
   display: block;
   position: absolute;
-  height: 15vh;
+  height: 30vh;
   width: 100%;
   top: -50%;
   left: 0;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
-  -webkit-animation: drop 3s 0s infinite;
-          animation: drop 3s 0s infinite;
+  background: linear-gradient(to bottom, rgba(238, 108, 1, 0.877) 0%,rgba(238, 108, 1, 0.877) 75%,rgba(238, 108, 1, 0.877) 100%);
+  -webkit-animation: drop 1s 0s infinite;
+          animation: drop 1s 0s infinite;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   -webkit-animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
